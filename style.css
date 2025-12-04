@@ -1,0 +1,562 @@
+/* 全局背景：深色 + 游戏封面做墙纸 */
+body {
+    margin: 0;
+    font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+    background: #050711 url("images/2462bc5d4fa8ab0509d1d6d350a1486d.png") no-repeat center top fixed;
+    background-size: cover;
+    color: #e5e7eb;
+}
+
+/* 顶部黑色导航条 */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    background: rgba(5, 7, 17, 0.95);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+    z-index: 1000;
+}
+
+.topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.site-logo {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #e5e7eb;
+}
+
+.site-logo span {
+    color: #fbbf24;
+}
+
+.site-title {
+    font-size: 16px;
+    color: #e5e7eb;
+    flex: 1;
+    margin-left: 16px;
+}
+
+.topnav a {
+    color: #9ca3af;
+    margin-left: 14px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    color: #fbbf24;
+}
+
+/* 左侧导航栏 */
+.sidebar {
+    width: 220px;
+    background: rgba(9, 12, 23, 0.96);
+    color: #e5e7eb;
+    border-right: 1px solid rgba(148, 163, 184, 0.4);
+    height: 100vh;
+    padding: 72px 20px 20px; /* 预留顶部导航高度 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 6px 0;
+    color: #cbd5f5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sidebar a.active,
+.topnav a.active {
+    color: #fbbf24;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    color: #fbbf24;
+    text-decoration: underline;
+}
+
+/* 右侧内容区：深色面板 */
+.content {
+    margin-left: 220px;        /* 和侧边栏一样宽 */
+    padding: 80px 40px 40px;   /* 预留顶部导航 */
+    max-width: 1040px;
+    box-sizing: border-box;
+}
+
+/* 顶部大标题 */
+.main-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 8px auto 18px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.75);
+}
+
+/* 顶部大图区域 */
+.hero-block {
+    margin-bottom: 10px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.game-cover {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(15,23,42,0.8);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.9);
+}
+
+.caption {
+    font-size: 13px;
+    color: #d1d5db;
+    margin-top: 6px;
+    text-align: center;
+}
+
+/* 信息框 + 简介两列布局 */
+.section-two-col {
+    display: grid;
+    grid-template-columns: 3fr 1.4fr;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.infobox {
+    background: rgba(17, 24, 39, 0.96);
+    border-radius: 10px;
+    padding: 10px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    font-size: 13px;
+}
+
+.infobox h3 {
+    margin: 0 0 6px;
+    padding: 6px;
+    background: rgba(31, 41, 55, 0.9);
+    text-align: center;
+    font-size: 14px;
+}
+
+.infobox ul {
+    padding-left: 18px;
+    margin: 6px 0 0;
+}
+
+.infobox li {
+    margin: 2px 0;
+}
+
+/* 通用区块卡片 */
+.section-block {
+    background: rgba(15, 23, 42, 0.92);
+    border-radius: 12px;
+    padding: 16px 20px 18px;
+    margin-top: 20px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.65);
+}
+
+.section-block h2 {
+    font-size: 22px;
+    margin-top: 0;
+    border-left: 4px solid #fbbf24;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    color: #f9fafb;
+}
+
+.section-block p {
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+/* 主线关卡卡片 */
+.chapter-card {
+    border-radius: 10px;
+    padding: 12px 14px 14px;
+    margin: 12px 0;
+    background: rgba(17, 24, 39, 0.96);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+/* 多路线关卡布局（第三章起） */
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.branch-col h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #fbbf24;
+}
+
+.branch-col .mainlevel-image {
+    margin-top: 4px;
+}
+
+.chapter-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.chapter-card h3 {
+    margin: 0 0 4px;
+    font-size: 18px;
+}
+
+.chapter-tag {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: rgba(55, 65, 81, 0.9);
+    color: #e5e7eb;
+}
+
+.chapter-card .sub-line {
+    font-size: 13px;
+    color: #e5e7eb;
+}
+
+/* 主线图片 */
+.mainlevel-image {
+    text-align: center;
+    margin: 8px 0 2px;
+    position: relative;
+}
+
+.mainlevel-image a {
+    display: inline-block;
+    position: relative;
+}
+
+.mainlevel-cover {
+    max-width: 55%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(148, 163, 184, 0.8);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.85);
+}
+
+.image-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+    width: 60%;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.6);
+    color: #fbbf24;
+    font-size: 13px;
+}
+
+/* 快速导航*/
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.nav-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #111827;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.65);
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-card img {
+    width: 100%;
+    height: 150px;              /* 稍微增加高度 */
+    object-fit: cover;
+    object-position: top center; /* 以人物头部为主 */
+    filter: brightness(0.9);
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+
+.nav-card span {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+}
+
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.85);
+    border-color: #fbbf24;
+}
+
+.nav-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(1);
+}
+
+/* 主线关卡 / IF 线表格 */
+.section-table {
+    margin-top: 14px;
+    overflow-x: auto;
+}
+
+.section-table .sub-title {
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: #e5e7eb;
+}
+
+.level-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 23, 42, 0.96);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+}
+
+.level-table thead {
+    background: rgba(31, 41, 55, 0.98);
+}
+
+.level-table th,
+.level-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+    text-align: left;
+}
+
+.level-table th {
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.level-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.level-table tbody tr:nth-child(even) {
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.if-table td {
+    vertical-align: top;
+}
+
+.if-table td:first-child {
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/* 武器链接区 */
+.weapon-links ul {
+    padding-left: 20px;
+    margin: 4px 0 10px;
+}
+
+.weapon-links li {
+    margin: 2px 0;
+}
+
+.weapon-links a {
+    color: #fbbf24;
+    text-decoration: none;
+}
+
+.weapon-links a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ 样式 */
+.faq-item {
+    margin: 10px 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(17, 24, 39, 0.96);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.faq-item .q {
+    font-weight: bold;
+    margin: 0 0 4px;
+}
+
+.faq-item .a {
+    margin: 0;
+}
+
+/* 页脚 */
+.footer {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #9ca3af;
+    text-align: center;
+}
+
+/* 响应式：窄屏时隐藏侧栏 */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        margin-left: 0;
+        padding: 80px 16px 32px;
+    }
+    .section-two-col {
+        grid-template-columns: 1fr;
+    }
+    .mainlevel-cover {
+        max-width: 85%;
+    }
+    .branch-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 玩家意见反馈表单 */
+.feedback-form {
+    margin-top: 10px;
+    max-width: 520px;
+    background: rgba(15, 23, 42, 0.96);
+    padding: 16px 18px;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    box-sizing: border-box;
+}
+
+.feedback-form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    gap: 4px;
+}
+
+.feedback-form label {
+    font-size: 14px;
+    color: #e5e7eb;
+}
+
+.feedback-form input[type="text"],
+.feedback-form select,
+.feedback-form textarea {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(75, 85, 99, 0.95);
+    background: rgba(15, 23, 42, 0.98);
+    color: #e5e7eb;
+    outline: none;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.7);
+}
+
+.feedback-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.feedback-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    font-size: 14px;
+}
+
+.feedback-radio-group input {
+    margin-right: 4px;
+}
+
+.feedback-form-actions {
+    margin-top: 6px;
+    display: flex;
+    gap: 10px;
+}
+
+.feedback-form button {
+    cursor: pointer;
+    border: none;
+    border-radius: 999px;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #111827;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+    transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.1s ease;
+}
+
+.feedback-form button[type="reset"] {
+    background: transparent;
+    color: #e5e7eb;
+    border: 1px solid rgba(75, 85, 99, 0.95);
+    box-shadow: none;
+}
+
+.feedback-form button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.8);
+}
+
+.feedback-form button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 900px) {
+    .feedback-form {
+        max-width: 100%;
+    }
+}
