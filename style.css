@@ -106,6 +106,50 @@ body {
     box-sizing: border-box;
 }
 
+/* 第一章页面：战斗导航条 */
+.chapter-nav {
+    margin: 6px 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chapter-nav a {
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    text-decoration: none;
+    color: #e5e7eb;
+    background: rgba(15, 23, 42, 0.9);
+    transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.chapter-nav a:hover {
+    background: #fbbf24;
+    color: #111827;
+    transform: translateY(-1px);
+}
+
+/* 最终战斗模块高亮 */
+.final-battle {
+    border: 1px solid #fbbf24;
+    box-shadow: 0 0 24px rgba(251, 191, 36, 0.22);
+}
+
+/* 战斗步骤列表 */
+.battle-steps {
+    margin: 6px 0 10px 1.2em;
+    padding: 0;
+    color: #e5e7eb;
+    line-height: 1.8;
+}
+
+.battle-steps li {
+    margin: 2px 0;
+}
+
+
 /* 顶部大标题 */
 .main-title {
     text-align: center;
@@ -182,12 +226,24 @@ body {
 }
 
 .section-block h2 {
+    position: relative;
     font-size: 22px;
     margin-top: 0;
-    border-left: 4px solid #fbbf24;
-    padding-left: 10px;
+    padding-left: 12px;
     margin-bottom: 10px;
     color: #f9fafb;
+}
+
+/* 左侧高亮竖条 */
+.section-block h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #fbbf24, #f97316);
 }
 
 .section-block p {
@@ -404,6 +460,54 @@ body {
 
 .weapon-links a:hover {
     text-decoration: underline;
+}
+
+/* 马匹表格区域 */
+.horse-table-wrapper {
+    margin-top: 8px;
+    overflow-x: auto; /* 小屏可以横向滚动 */
+}
+
+/* 马匹信息表 */
+.horse-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: rgba(15, 23, 42, 0.96);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.8);
+}
+
+/* 表头和单元格的基础样式 */
+.horse-table th,
+.horse-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+    text-align: left;
+}
+
+/* 表头背景稍微深一点 */
+.horse-table th {
+    background: rgba(31, 41, 55, 0.98);
+    font-weight: 600;
+}
+
+/* 斑马线效果，增强可读性 */
+.horse-table tbody tr:nth-child(even) {
+    background: rgba(15, 23, 42, 0.9);
+}
+
+/* 最后一行去掉底部边框 */
+.horse-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 第一列（马名）固定宽度，避免换行太难看 */
+.horse-table th:first-child,
+.horse-table td:first-child {
+    width: 90px;
+    white-space: nowrap;
 }
 
 /* FAQ 样式 */

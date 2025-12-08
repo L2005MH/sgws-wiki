@@ -6,49 +6,349 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- 左侧导航栏（和首页一样风格） -->
+    
+<!-- 左侧导航栏（和首页保持一致） -->
 <div class="sidebar">
     <h2>攻略目录</h2>
     <a href="index.html#intro">游戏简介</a>
     <a href="index.html#mainlevels">主线关卡</a>
     <a href="index.html#weapons">武器/装备</a>
+    <a href="index.html#horses">马匹</a>
     <a href="index.html#faq">常见问题</a>
 </div>
 
-<!-- 右侧内容：本页只讲第一章 -->
+<!-- 右侧内容：第一章详解 -->
 <div class="content">
     <h1>主线关卡详解：第一章 · 黄巾之乱</h1>
 
-    <p><a href="index.html#mainlevels">← 返回主线关卡总览</a></p>
+    <!-- 小导航：快速跳转到各战斗段落 -->
+    <nav class="chapter-nav">
+        <a href="#battle1">张飞的模拟战</a>
+        <a href="#battle2">广阳之战</a>
+        <a href="#battle3">颍川之战</a>
+        <a href="#battle4">宛城之战</a>
+        <a href="#battle5">广宗之战</a>
+        <a href="#battle6">黄巾军决战</a>
+    </nav>
 
+    <!-- 简短总介绍 -->
     <section class="section-block">
-        <h2>关卡背景</h2>
-        <p>黄巾军因暴政而起，天下大乱，玩家将以无名英雄的身份参与平定黄巾之乱。</p>
+        <h2>章节概览</h2>
+        <p>
+            第一章主要讲主角和刘备、张飞在幽州一带结缘，
+            通过几场教学性质的战斗熟悉操作，并逐步解锁传送点、旅店书信、
+            情谊系统以及武器店等基础功能。
+        </p>
     </section>
 
+    <!-- 1. 张飞的模拟战 -->
+    <section class="section-block" id="battle1">
+        <h2>战斗一：张飞的模拟战</h2>
+
+        <p>
+            开场动画结束后会来到大地图。先前往附近带黄色感叹号的村长处，
+            对话后就能正式开始第一章的任务流程。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/cdf779a6ecf75db2090bf1c14d266922.png" alt="与村长对话后开启任务" class="mainlevel-cover">
+        </div>
+
+        <p>
+            沿路前往蓟县前，会在路边看到第一个传送点。
+            建议顺手激活，这样后面就可以使用传送点在大地图之间快速移动。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/dd0853e717a63243c0e118957cfb5902.png" alt="激活传送点" class="mainlevel-cover">
+        </div>
+
+        <p>
+            进入城镇后，先去旅店选择“书信”选项，之后很多主线与支线事件都会在这里展开。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/15ecf4969fbca63bedb69a734a04fbdb.png" alt="旅店书信界面" class="mainlevel-cover">
+        </div>
+
+        <p>
+            随后在蓟县外与刘备交谈，会触发第一场战斗
+            <strong>「张飞的模拟战」</strong>。
+            这场战斗基本属于教学关，只要按照指引完成各项操作，
+            将张飞打到一定血量即可结束，之后会自动解锁下一关「广阳之战」。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/11fd22980df47bac04d1188fe8395d16.png" alt="张飞的模拟战" class="mainlevel-cover">
+        </div>
+    </section>
+
+    <!-- 2. 广阳之战 -->
+    <section class="section-block" id="battle2">
+        <h2>战斗二：广阳之战</h2>
+
+        <p>
+            回到大地图后，可以在附近的传送点旁找到通往
+            <strong>「广阳之战」</strong> 的旗帜，调查即可进入战斗。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/dd0853e717a63243c0e118957cfb5902.png" alt="广阳之战旗帜位置" class="mainlevel-cover">
+        </div>
+
+        <p>
+            进入战场后，沿着右侧道路一路推进，清理途中敌人，
+            与左路的张飞会合后继续向地图左上推进，最终击败武将程志远即可取得胜利。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/9f9b88ed853be2765042f4f5fbb475f8.png" alt="广阳之战推进路线" class="mainlevel-cover">
+        </div>
+
+        <p>
+            战斗结束后返回蓟县，可以通过与张飞对话提升情谊，
+            同时解锁武器店等后续功能，为接下来的章节做准备。
+        </p>
+    </section>
+
+    <!-- 小提示 -->
     <section class="section-block">
-        <h2>关卡目标</h2>
+        <h2>小提示</h2>
         <ul>
-            <li>击败指定黄巾军头目</li>
-            <li>保护友军不被击溃</li>
-            <li>在时间限制内打穿敌军防线（可选）</li>
+            <li>注意留意路边的收集品（如古钱币），虽然不强制，但可以顺手捡。（后期全成就要收集全部古钱币）</li>
+            <li>多和同伴交谈，可以提高情谊。（有一些角色情谊如果不在这一章就没有办法触发了）</li>
         </ul>
     </section>
 
-    <section class="section-block">
-        <h2>推荐武器与武将</h2>
-        <p>推荐使用攻击节奏较快的武器（如剑、枪），方便快速清理小兵。</p>
+    <!-- 3. 颍川之战 -->
+    <section class="section-block" id="battle3">
+        <h2>战斗三：颍川之战</h2>
+
+        <p>
+            本关的 BOSS 是张宝，核心机制是分散在战场三处的
+            <strong>四个香炉</strong>。只有全部破坏，才能削弱对方的法术。
+        </p>
+
+        <p>
+            首先向左侧战场推进，清掉周围敌军后，注意张宝施法的提示，
+            根据箭头指引前往右侧角落，在高台上可以找到第一个香炉，
+            上楼梯砸掉即可。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/3acfb20ff2419fa77f012d43852d45ca.png"
+                 alt="第一个香炉所在的高台"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            接着来到中部主战场，这里有两个香炉，分别位于战场右上和右下两侧，
+            依照小地图标记逐个清理即可。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/20999540505e75dfe072eb3e564e7762.png"
+                 alt="中路战场的两个香炉位置"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            最后向战场右侧推进，在红色标记区域找到第四个香炉。
+            破坏后继续推进，占领最上方的据点，与友军会合后击败张宝，
+            战斗就会结束。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/83e52f6f239ff128b0a6587a98501cd6.png"
+                 alt="与张宝的决战"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            胜利后会出现任务【平定豫州之任】，同时与夏侯渊对话可以开启修炼系统，
+            根据给出的条件完成修炼可以获得额外战功奖励。
+        </p>
     </section>
 
-    <section class="section-block">
-        <h2>通关小技巧</h2>
-        <ul>
-            <li>优先清理弓箭手与远程单位，减少无谓掉血。</li>
-            <li>注意观察小地图，及时支援快要被击溃的友军。</li>
-            <li>适当使用无双技在敌军密集处清场。</li>
-        </ul>
+    <!-- 4. 宛城之战 -->
+    <section class="section-block" id="battle4">
+        <h2>战斗四：宛城之战</h2>
+
+        <p>
+            来到宛城附近的新讨伐军阵地，观看完剧情后会解锁主战斗
+            <strong>「宛城之战」</strong>，本关 BOSS 为张梁。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_12_wancheng_camp.jpg"
+                 alt="宛城讨伐军阵地"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            战斗开始后，先夺回地图中下方的据点，稳定前线，
+            随后一路向上推进到宛城城门口，清理门前敌军。
+        </p>
+
+        <p>
+            敌方会派出冲车，记得护送冲车安全到达城门，
+            破门后部队就能攻入城内。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_13_wancheng_ram.jpg"
+                 alt="护送冲车攻破城门"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            城内有两个香炉需要破坏，位置大致在内城左右两处，
+            建议一边清怪一边沿着城内道路巡逻，很容易就能发现。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_14_wancheng_incense.jpg"
+                 alt="宛城内部香炉位置示意"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            香炉全部破坏后，直接向地图最上方推进，
+            在最后的据点与张梁交战，获胜即可结束战斗。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_15_wancheng_boss.jpg"
+                 alt="宛城之战 BOSS 张梁"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            战后不要急着离开：城左侧有一位钓鱼老人，
+            与他交谈可以获得武艺书【剑：猛进闪】。
+            回到营地后，与黄盖、夏侯渊等武将对话可以提升情谊，
+            还可以从牵马的商人手中获得一匹马，为后续探索提供帮助。
+        </p>
     </section>
+ 
+    <!-- 5. 广宗之战 -->
+    <section class="section-block" id="battle5">
+        <h2>战斗五：广宗之战</h2>
+
+        <p>
+            之后前往濮阳与韩当等人提升情谊，再穿过黄河，
+            按照灵鸟之眼的引导来到对岸的讨伐军营地，
+            即可解锁 <strong>「广宗之战」</strong>。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_16_guangzong_camp.jpg"
+                 alt="广宗讨伐军营地"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            这一关的目标比较直接：击溃张角的大军。
+            开局先从中央战场入手，击败周围敌军并收复中间据点。
+        </p>
+
+        <p>
+            之后根据战况向左、右两侧推进，将两翼据点全部拿下，
+            可以减轻中路压力。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_17_guangzong_mid.jpg"
+                 alt="广宗之战中路推进"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            完成两翼清理后回到中路，随着友军一起向上推进，
+            与董卓会合后便可发起总攻，向张角的大军阵地突击，
+            最终击溃敌军完成任务。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_18_guangzong_final.jpg"
+                 alt="与张角大军的决战"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            战斗结束后，按照灵鸟之眼提示前往营地右侧的森林，
+            在篝火旁可以触发与张角的特殊剧情，完成后会解锁
+            支线任务【救援讨伐军之任】。
+            同时，与营地中的董卓对话能够继续提升情谊，
+            与刘备对话则会开启最终战【黄巾军决战】。
+        </p>
+    </section>
+
+    <!-- 6. 黄巾军决战 -->
+    <section class="section-block final-battle" id="battle6">
+        <h2>战斗六：黄巾军决战</h2>
+
+        <p>
+            最终战 <strong>「黄巾军决战」</strong> 的起点在地图左下角，
+            总体目标是一路突破敌阵、破解两种战场异常效果，
+            最后在大门内与张角进行一对一决战。
+        </p>
+
+        <p>推荐流程如下：</p>
+        <ol class="battle-steps">
+            <li>从起点沿左侧道路前进，在岔路处选择向右上推进，目标是抵达右上区域。</li>
+            <li>右上区域会触发“幻影急袭”，需要在限定时间内找到张梁并击败，否则战况会变得非常困难。</li>
+            <li>清理附近敌人后，根据小地图提示前往右侧高台，张梁就在高台附近，击败后可解除该 debuff。</li>
+            <li>随后跟随曹操的大部队向左侧战场移动，注意地图左上角会出现“烟消云散”效果。</li>
+            <li>按照箭头指引绕到多边形塔楼所在高地，登上塔顶破坏香炉，使敌军的异常状态解除，同时逼出张宝并将其击败。</li>
+            <li>张宝战后，大门开启，部队向更上方推进，进入门内便会触发与张角的一对一 BOSS 战。</li>
+        </ol>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_19_final_route1.jpg"
+                 alt="黄巾军决战前半段路线"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            张角擅长各种大范围法术攻击，战斗中多使用【发劲】类招式打断，
+            中途会解锁“武神觉醒”，合理利用爆发可以更轻松地压制他。
+            当第一条血条被削空后，他会召唤大军并回复体力，
+            可以先拉开距离，优先清理小兵，等待友军增援。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_23_final_magic.jpg"
+                 alt="张角的法术攻击"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            后续还会出现【黄风天雷】效果，需要在该阶段击败约三百名敌兵才能解除，
+            雷击伤害很高，看到提示就立刻转为清兵模式。
+            入口附近有不少罐子，打碎后会掉落肉包，
+            状态不佳时可以暂时退出战圈到入口处打罐子回血。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_24_final_thunder.jpg"
+                 alt="黄风天雷阶段清兵"
+                 class="mainlevel-cover">
+        </div>
+
+        <p>
+            最终击败张角后，返回大地图，跟随灵鸟之眼的指引前往附近村庄，
+            在村口与重伤的张角进行最后的对话，
+            完成这段剧情后，第一章的所有流程就算正式告一段落。
+        </p>
+
+        <div class="mainlevel-image">
+            <img src="images/ch1_25_final_village.jpg"
+                 alt="与张角告别完成第一章"
+                 class="mainlevel-cover">
+        </div>
+    </section>
+
 </div>
 
 </body>
